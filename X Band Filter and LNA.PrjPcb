@@ -85,6 +85,152 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
+[Document3]
+DocumentPath=PCB1.PcbDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=TSPLOIND
+
+[Document4]
+DocumentPath=X Band Filter and LNA.IntLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
+[GeneratedDocument1]
+DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\odb\steps\pcb\layers\comp_+_top\components
+DItemRevisionGUID=
+
+[GeneratedDocument2]
+DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\odb\steps\pcb\eda\data
+DItemRevisionGUID=
+
+[GeneratedDocument3]
+DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\odb\steps\pcb\layers\bottom_overlay\features
+DItemRevisionGUID=
+
+[GeneratedDocument4]
+DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\odb\steps\pcb\layers\bottom_paste\features
+DItemRevisionGUID=
+
+[GeneratedDocument5]
+DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\odb\steps\pcb\layers\bottom_solder\features
+DItemRevisionGUID=
+
+[GeneratedDocument6]
+DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\odb\steps\pcb\layers\comp_+_top\features
+DItemRevisionGUID=
+
+[GeneratedDocument7]
+DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\odb\steps\pcb\layers\dielectric_1\features
+DItemRevisionGUID=
+
+[GeneratedDocument8]
+DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\odb\steps\pcb\layers\dielectric_2\features
+DItemRevisionGUID=
+
+[GeneratedDocument9]
+DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\odb\steps\pcb\layers\dielectric_3\features
+DItemRevisionGUID=
+
+[GeneratedDocument10]
+DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\odb\steps\pcb\layers\drill_blind_vias_rf-ground\features
+DItemRevisionGUID=
+
+[GeneratedDocument11]
+DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\odb\steps\pcb\layers\drill_blind_vias_rf-vcc\features
+DItemRevisionGUID=
+
+[GeneratedDocument12]
+DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\odb\steps\pcb\layers\drill_plated_signal-rf\features
+DItemRevisionGUID=
+
+[GeneratedDocument13]
+DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\odb\steps\pcb\layers\ground\features
+DItemRevisionGUID=
+
+[GeneratedDocument14]
+DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\odb\steps\pcb\layers\rf\features
+DItemRevisionGUID=
+
+[GeneratedDocument15]
+DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\odb\steps\pcb\layers\signal\features
+DItemRevisionGUID=
+
+[GeneratedDocument16]
+DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\odb\steps\pcb\layers\top_overlay\features
+DItemRevisionGUID=
+
+[GeneratedDocument17]
+DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\odb\steps\pcb\layers\top_paste\features
+DItemRevisionGUID=
+
+[GeneratedDocument18]
+DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\odb\steps\pcb\layers\top_solder\features
+DItemRevisionGUID=
+
+[GeneratedDocument19]
+DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\odb\steps\pcb\layers\vcc\features
+DItemRevisionGUID=
+
+[GeneratedDocument20]
+DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\odb\matrix\matrix
+DItemRevisionGUID=
+
+[GeneratedDocument21]
+DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\odb\steps\pcb\netlists\cadnet\netlist
+DItemRevisionGUID=
+
+[GeneratedDocument22]
+DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\PCB1.REP
+DItemRevisionGUID=
+
+[GeneratedDocument23]
+DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\Pick Place for PCB1.csv
+DItemRevisionGUID=
+
+[GeneratedDocument24]
+DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\odb\steps\pcb\profile
+DItemRevisionGUID=
+
+[GeneratedDocument25]
+DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\odb\steps\pcb\stephdr
+DItemRevisionGUID=
+
+[GeneratedDocument26]
+DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\odb\steps\pcb\layers\drill_blind_vias_rf-ground\tools
+DItemRevisionGUID=
+
+[GeneratedDocument27]
+DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\odb\steps\pcb\layers\drill_blind_vias_rf-vcc\tools
+DItemRevisionGUID=
+
+[GeneratedDocument28]
+DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\odb\steps\pcb\layers\drill_plated_signal-rf\tools
+DItemRevisionGUID=
+
 [Configuration1]
 Name=Sources
 ParameterCount=0
@@ -515,6 +661,8 @@ OutputName10=ODB++ Files
 OutputDocumentPath10=
 OutputVariantName10=[No Variations]
 OutputDefault10=0
+Configuration10_Name1=OutputConfigurationParameter1
+Configuration10_Item1=Compression_None=True|Compression_tar_tgz=True|Compression_zip=True|DifferentFootprints=False|ExportPositivePlaneLayers=False|GenerateDRCRulesFile=False|IncludeUnconnectedMidLayerPads=False|MergeNetTieNets=False|ObjsInsideBoardOutlineOnly=False|ODBProfileLayer=-1000|ODBProfileLayerV7=-1|PlotBackDrillingPairs=False|PlotBlindViasPairs=False|PlotBottomLayerPlot=True|PlotBottomOverlayPlot=True|PlotBottomPastePlot=True|PlotBottomSolderPlot=True|PlotCounterHolesPairs=False|PlotDrillDrawingPairs=False|PlotDrillGuidePairs=False|PlotInternalPlane10Plot=False|PlotInternalPlane11Plot=False|PlotInternalPlane12Plot=False|PlotInternalPlane13Plot=False|PlotInternalPlane14Plot=False|PlotInternalPlane15Plot=False|PlotInternalPlane16Plot=False|PlotInternalPlane1Plot=True|PlotInternalPlane2Plot=True|PlotInternalPlane3Plot=False|PlotInternalPlane4Plot=False|PlotInternalPlane5Plot=False|PlotInternalPlane6Plot=False|PlotInternalPlane7Plot=False|PlotInternalPlane8Plot=False|PlotInternalPlane9Plot=False|PlotKeepOutLayerPlot=False|PlotMechanical10Plot=False|PlotMechanical11Plot=False|PlotMechanical12Plot=False|PlotMechanical13Plot=False|PlotMechanical14Plot=False|PlotMechanical15Plot=False|PlotMechanical16Plot=False|PlotMechanical1Plot=False|PlotMechanical2Plot=False|PlotMechanical3Plot=False|PlotMechanical4Plot=False|PlotMechanical5Plot=False|PlotMechanical6Plot=False|PlotMechanical7Plot=False|PlotMechanical8Plot=False|PlotMechanical9Plot=False|PlotMicroViasPairs=False|PlotMidLayer10Plot=False|PlotMidLayer11Plot=False|PlotMidLayer12Plot=False|PlotMidLayer13Plot=False|PlotMidLayer14Plot=False|PlotMidLayer15Plot=False|PlotMidLayer16Plot=False|PlotMidLayer17Plot=False|PlotMidLayer18Plot=False|PlotMidLayer19Plot=False|PlotMidLayer1Plot=False|PlotMidLayer20Plot=False|PlotMidLayer21Plot=False|PlotMidLayer22Plot=False|PlotMidLayer23Plot=False|PlotMidLayer24Plot=False|PlotMidLayer25Plot=False|PlotMidLayer26Plot=False|PlotMidLayer27Plot=False|PlotMidLayer28Plot=False|PlotMidLayer29Plot=False|PlotMidLayer2Plot=False|PlotMidLayer30Plot=False|PlotMidLayer3Plot=False|PlotMidLayer4Plot=False|PlotMidLayer5Plot=False|PlotMidLayer6Plot=False|PlotMidLayer7Plot=False|PlotMidLayer8Plot=False|PlotMidLayer9Plot=False|PlotNPTHPairs=False|PlotPTHPairs=False|PlotTopLayerPlot=True|PlotTopOverlayPlot=True|PlotTopPastePlot=True|PlotTopSolderPlot=True|PlotViaTypeDrillDrawingPairs=False|PlotViaTypeDrillGuidePairs=False|PlotViaTypeDrillPairs=False|Record=ODBView|ToolsByDrillSymbols=False|Units=Metric|DocumentPath=
 OutputType11=Plane
 OutputName11=Power-Plane Prints
 OutputDocumentPath11=
