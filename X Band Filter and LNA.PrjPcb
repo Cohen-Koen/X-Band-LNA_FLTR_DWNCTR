@@ -32,6 +32,7 @@ ReportSuppressedErrorsInMessages=0
 FSMCodingStyle=eFMSDropDownList_OneProcess
 FSMEncodingStyle=eFMSDropDownList_OneHot
 IsProjectConflictPreventionWarningsEnabled=1
+ConstraintManagerFlow=0
 IsVirtualBomDocumentRemoved=0
 OutputPath=
 LogFolderPath=
@@ -118,6 +119,40 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
+
+[Document5]
+DocumentPath=PCB2.PcbDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=CIDYIXHI
+
+[Document6]
+DocumentPath=PCB3.PcbDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=WGGMTMBU
 
 [GeneratedDocument1]
 DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\odb\steps\pcb\layers\comp_+_top\components
@@ -212,22 +247,26 @@ DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C
 DItemRevisionGUID=
 
 [GeneratedDocument24]
-DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\odb\steps\pcb\profile
+DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\Pick Place for PCB3.csv
 DItemRevisionGUID=
 
 [GeneratedDocument25]
-DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\odb\steps\pcb\stephdr
+DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\odb\steps\pcb\profile
 DItemRevisionGUID=
 
 [GeneratedDocument26]
-DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\odb\steps\pcb\layers\drill_blind_vias_rf-ground\tools
+DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\odb\steps\pcb\stephdr
 DItemRevisionGUID=
 
 [GeneratedDocument27]
-DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\odb\steps\pcb\layers\drill_blind_vias_rf-vcc\tools
+DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\odb\steps\pcb\layers\drill_blind_vias_rf-ground\tools
 DItemRevisionGUID=
 
 [GeneratedDocument28]
+DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\odb\steps\pcb\layers\drill_blind_vias_rf-vcc\tools
+DItemRevisionGUID=
+
+[GeneratedDocument29]
 DocumentPath=..\..\..\..\..\ProgramData\Altium\Altium Designer {F8DCB782-3EEC-4C94-8798-704ACF9BD45A}\Extensions\EMIStreamV2\Data\odb\steps\pcb\layers\drill_plated_signal-rf\tools
 DItemRevisionGUID=
 
@@ -1117,6 +1156,8 @@ Type133=1
 Type134=1
 Type135=1
 Type136=1
+Type137=1
+Type138=1
 
 [Difference Levels]
 Type1=1
@@ -1346,6 +1387,8 @@ Type148=2
 Type149=2
 Type150=2
 Type151=2
+Type152=1
+Type153=1
 
 [ERC Connection Matrix]
 L1=NNNNNNNNNNNWNNNWW
