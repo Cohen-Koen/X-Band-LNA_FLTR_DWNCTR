@@ -1,0 +1,484 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 9em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD23\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">1/20/2024</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">11:30:08 AM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:02</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc" class="file"><acronym title="C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc">C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">44</td></tr>
+</table>
+</td>
+</table><a name="IDMVMIS15K2PMZNVDH1F3ZAS3PTCFCOHTIFWPNQUNX0S0HDH4HDPYO"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDRP1ZPGK0NF3WJGRQT5ENFKT5FILKCWAFRKNNOON0SFRZ5NTEAMXO">Clearance Constraint (Gap=10mil) (All),(All)</a></td>
+<td class="column2">9</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDNJ3F4RK143WXFE3MCQ52UA1UOMBXM0KB4TKANEJPZXNLVEB0J23F">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">3</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDVVG302JOLDASES11XIF1BWJ3SE2OMLWYLXNHMUKP12UC2LF13MXC">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">10</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDONPVYXMW5OZQBY4JKK3O0APRDOIM1JFAY1TYFTICY4ZIPK4TVMPH">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDQSOGXS2IQOOSOLE24WCRYTGIJNCAJLRBNXJSNONPEDKK3LSZ50IM">Width Constraint (Min=10mil) (Max=10mil) (Preferred=10mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDHJCQF5YJEZ4AMEF2JL0OJU0PHGOO0AOANSEJCWBQOTSZSPC0TDSO">Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDB4R5E0BB1O3NNZKKKRM40SZWPPMG4Z0ORDTEOGFQBOISY1AKH1G">Hole Size Constraint (Min=1mil) (Max=100mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDHQYDV1W5KEABN1VEB5GNF4BTXMP0DGHA54YIKPKPCVEHXWY5BTRP">Hole To Hole Clearance (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID33JBEM2RTULSBOQYMLIJAWMTWBQBDUSL3HRJHEHXC5SG0MGGYDK">Minimum Solder Mask Sliver (Gap=10mil) (All),(All)</a></td>
+<td class="column2">5</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDYWOWUN420C3CCGQHYU0SZANOCPP3ZH0JXTL0X3HBOK3XIXI35T1H">Silk To Solder Mask (Clearance=10mil) (IsPad),(All)</a></td>
+<td class="column2">11</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDD2QBYJ3QO5TJJIJA04CI2F30RG13N5TL3G1JA3BFLT3LDMUSF24M">Silk to Silk (Clearance=10mil) (All),(All)</a></td>
+<td class="column2">4</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDSYMSA2CMFRA3KW2UX4EOPPOXAMTSACKKDAYWNZJPSW1FCC2GBQ4P">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">2</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDGND41ZQDSWHCDNXO5RALNGO1LKJUJVBSNMN1OOBEGRQJT2D1LLL">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">44</td>
+</tr>
+</table><br><a name="IDRP1ZPGK0NF3WJGRQT5ENFKT5FILKCWAFRKNNOON0SFRZ5NTEAMXO"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Clearance Constraint (Gap=10mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2355.357mil|Location2.X=2366.607mil|Location1.Y=3964.375mil|Location2.Y=3975.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2355.357mil|Location2.X=2366.607mil|Location1.Y=3964.375mil|Location2.Y=3975.625mil|Absolute=True">Clearance Constraint: (5.906mil &lt; 10mil) Between Pad C3-1(2375mil,3951.672mil) on Top Layer And Pad C3-2(2375mil,3988.328mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2285.595mil|Location2.X=2296.845mil|Location1.Y=3964.375mil|Location2.Y=3975.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2285.595mil|Location2.X=2296.845mil|Location1.Y=3964.375mil|Location2.Y=3975.625mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 10mil) Between Pad R2-1(2305mil,3988.701mil) on Top Layer And Pad R2-2(2305mil,3951.299mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2306.167mil|Location2.X=2313.833mil|Location1.Y=4171.167mil|Location2.Y=4178.833mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2306.167mil|Location2.X=2313.833mil|Location1.Y=4171.167mil|Location2.Y=4178.833mil|Absolute=True">Clearance Constraint: (Collision &lt; 10mil) Between Track (2070.858mil,4175mil)(2305mil,4175mil) on Bottom Layer And Via (2310mil,4175mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2211.167mil|Location2.X=2218.833mil|Location1.Y=4541.167mil|Location2.Y=4548.833mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2211.167mil|Location2.X=2218.833mil|Location1.Y=4541.167mil|Location2.Y=4548.833mil|Absolute=True">Clearance Constraint: (Collision &lt; 10mil) Between Track (2113.432mil,4545mil)(2215mil,4545mil) on Bottom Layer And Via (2215mil,4545mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2179.875mil|Location2.X=2191.125mil|Location1.Y=4432.875mil|Location2.Y=4444.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2179.875mil|Location2.X=2191.125mil|Location1.Y=4432.875mil|Location2.Y=4444.125mil|Absolute=True">Clearance Constraint: (9.026mil &lt; 10mil) Between Track (2175mil,4439mil)(2176mil,4438mil) on Top Layer And Track (2195mil,4439mil)(2195mil,4514.176mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2179.875mil|Location2.X=2191.125mil|Location1.Y=4432.875mil|Location2.Y=4444.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2179.875mil|Location2.X=2191.125mil|Location1.Y=4432.875mil|Location2.Y=4444.125mil|Absolute=True">Clearance Constraint: (9.026mil &lt; 10mil) Between Track (2176mil,4418.787mil)(2176mil,4438mil) on Top Layer And Track (2195mil,4439mil)(2195mil,4514.176mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2238.875mil|Location2.X=2250.125mil|Location1.Y=4432.875mil|Location2.Y=4444.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2238.875mil|Location2.X=2250.125mil|Location1.Y=4432.875mil|Location2.Y=4444.125mil|Absolute=True">Clearance Constraint: (9.026mil &lt; 10mil) Between Track (2235mil,4439mil)(2235mil,4514.176mil) on Top Layer And Track (2254mil,4418.787mil)(2254mil,4438mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2238.875mil|Location2.X=2250.125mil|Location1.Y=4432.875mil|Location2.Y=4444.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2238.875mil|Location2.X=2250.125mil|Location1.Y=4432.875mil|Location2.Y=4444.125mil|Absolute=True">Clearance Constraint: (9.026mil &lt; 10mil) Between Track (2235mil,4439mil)(2235mil,4514.176mil) on Top Layer And Track (2254mil,4438mil)(2255mil,4439mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2306.167mil|Location2.X=2313.833mil|Location1.Y=4171.167mil|Location2.Y=4178.833mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2306.167mil|Location2.X=2313.833mil|Location1.Y=4171.167mil|Location2.Y=4178.833mil|Absolute=True">Clearance Constraint: (Collision &lt; 10mil) Between Track (2305mil,4175mil)(2310mil,4175mil) on Bottom Layer And Via (2310mil,4175mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDNJ3F4RK143WXFE3MCQ52UA1UOMBXM0KB4TKANEJPZXNLVEB0J23F"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Short-Circuit Constraint (Allowed=No) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2282.387mil|Location2.X=2312.59mil|Location1.Y=4159.899mil|Location2.Y=4190.101mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2282.387mil|Location2.X=2312.59mil|Location1.Y=4159.899mil|Location2.Y=4190.101mil|Absolute=True">Short-Circuit Constraint: Between Track (2070.858mil,4175mil)(2305mil,4175mil) on Bottom Layer And Via (2310mil,4175mil) from Top Layer to Bottom Layer Location : [X = 2297.488mil][Y = 4175mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2187.542mil|Location2.X=2222.435mil|Location1.Y=4527.554mil|Location2.Y=4562.446mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2187.542mil|Location2.X=2222.435mil|Location1.Y=4527.554mil|Location2.Y=4562.446mil|Absolute=True">Short-Circuit Constraint: Between Track (2113.432mil,4545mil)(2215mil,4545mil) on Bottom Layer And Via (2215mil,4545mil) from Top Layer to Bottom Layer Location : [X = 2204.988mil][Y = 4545mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2296.85mil|Location2.X=2318.15mil|Location1.Y=4164.35mil|Location2.Y=4185.65mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2296.85mil|Location2.X=2318.15mil|Location1.Y=4164.35mil|Location2.Y=4185.65mil|Absolute=True">Short-Circuit Constraint: Between Track (2305mil,4175mil)(2310mil,4175mil) on Bottom Layer And Via (2310mil,4175mil) from Top Layer to Bottom Layer Location : [X = 2307.5mil][Y = 4175mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDVVG302JOLDASES11XIF1BWJ3SE2OMLWYLXNHMUKP12UC2LF13MXC"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2337mil|Location2.X=2363mil|Location1.Y=4382.5mil|Location2.Y=4437.5mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2337mil|Location2.X=2363mil|Location1.Y=4382.5mil|Location2.Y=4437.5mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad FL1-6(2340mil,4428.5mil) on Top Layer And Pad FL1-2(2360mil,4391.5mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1915.646mil|Location2.X=2149mil|Location1.Y=4450.646mil|Location2.Y=4539.354mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1915.646mil|Location2.X=2149mil|Location1.Y=4450.646mil|Location2.Y=4539.354mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad J1-5(1960mil,4495mil) on Multi-Layer And Via (2120mil,4495mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2231mil|Location2.X=2339mil|Location1.Y=4146mil|Location2.Y=4453mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2231mil|Location2.X=2339mil|Location1.Y=4146mil|Location2.Y=4453mil|Absolute=True">Un-Routed Net Constraint: Net NetC2_1 Between Pad LNA-2(2235mil,4439mil) on Top Layer And Via (2310mil,4175mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2060mil|Location2.X=2070mil|Location1.Y=4175.858mil|Location2.Y=4501.569mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2060mil|Location2.X=2070mil|Location1.Y=4175.858mil|Location2.Y=4501.569mil|Absolute=True">Un-Routed Net Constraint: Track (2065mil,4180.858mil)(2065mil,4496.569mil) on Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2060mil|Location2.X=2075.858mil|Location1.Y=4170mil|Location2.Y=4185.858mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2060mil|Location2.X=2075.858mil|Location1.Y=4170mil|Location2.Y=4185.858mil|Absolute=True">Un-Routed Net Constraint: Track (2065mil,4180.858mil)(2070.858mil,4175mil) on Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2060mil|Location2.X=2118.432mil|Location1.Y=4491.569mil|Location2.Y=4550mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2060mil|Location2.X=2118.432mil|Location1.Y=4491.569mil|Location2.Y=4550mil|Absolute=True">Un-Routed Net Constraint: Track (2065mil,4496.569mil)(2113.432mil,4545mil) on Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2065.858mil|Location2.X=2310mil|Location1.Y=4170mil|Location2.Y=4180mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2065.858mil|Location2.X=2310mil|Location1.Y=4170mil|Location2.Y=4180mil|Absolute=True">Un-Routed Net Constraint: Track (2070.858mil,4175mil)(2305mil,4175mil) on Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2108.432mil|Location2.X=2220mil|Location1.Y=4540mil|Location2.Y=4550mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2108.432mil|Location2.X=2220mil|Location1.Y=4540mil|Location2.Y=4550mil|Absolute=True">Un-Routed Net Constraint: Track (2113.432mil,4545mil)(2215mil,4545mil) on Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2300mil|Location2.X=2315mil|Location1.Y=4170mil|Location2.Y=4180mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2300mil|Location2.X=2315mil|Location1.Y=4170mil|Location2.Y=4180mil|Absolute=True">Un-Routed Net Constraint: Track (2305mil,4175mil)(2310mil,4175mil) on Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2276mil|Location2.X=2394mil|Location1.Y=4466mil|Location2.Y=4524mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2276mil|Location2.X=2394mil|Location1.Y=4466mil|Location2.Y=4524mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (2305mil,4495mil) from Top Layer to Bottom Layer And Via (2365mil,4495mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID33JBEM2RTULSBOQYMLIJAWMTWBQBDUSL3HRJHEHXC5SG0MGGYDK"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Minimum Solder Mask Sliver (Gap=10mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2355.357mil|Location2.X=2366.607mil|Location1.Y=3964.375mil|Location2.Y=3975.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2355.357mil|Location2.X=2366.607mil|Location1.Y=3964.375mil|Location2.Y=3975.625mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.906mil &lt; 10mil) Between Pad C3-1(2375mil,3951.672mil) on Top Layer And Pad C3-2(2375mil,3988.328mil) on Top Layer [Top Solder] Mask Sliver [5.906mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2062.091mil|Location2.X=2073.341mil|Location1.Y=4376.009mil|Location2.Y=4387.259mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2062.091mil|Location2.X=2073.341mil|Location1.Y=4376.009mil|Location2.Y=4387.259mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad CAP-1(2050mil,4390mil) on Top Layer And Pad CAP-2(2085.433mil,4390mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2331.875mil|Location2.X=2343.125mil|Location1.Y=3874.375mil|Location2.Y=3885.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2331.875mil|Location2.X=2343.125mil|Location1.Y=3874.375mil|Location2.Y=3885.625mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7mil &lt; 10mil) Between Via (2305mil,3880mil) from Top Layer to Bottom Layer And Via (2370mil,3880mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [7mil] / [Bottom Solder] Mask Sliver [7mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2329.375mil|Location2.X=2340.625mil|Location1.Y=4489.375mil|Location2.Y=4500.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2329.375mil|Location2.X=2340.625mil|Location1.Y=4489.375mil|Location2.Y=4500.625mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2mil &lt; 10mil) Between Via (2305mil,4495mil) from Top Layer to Bottom Layer And Via (2365mil,4495mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [2mil] / [Bottom Solder] Mask Sliver [2mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2396.875mil|Location2.X=2408.125mil|Location1.Y=3874.375mil|Location2.Y=3885.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2396.875mil|Location2.X=2408.125mil|Location1.Y=3874.375mil|Location2.Y=3885.625mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7mil &lt; 10mil) Between Via (2370mil,3880mil) from Top Layer to Bottom Layer And Via (2435mil,3880mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [7mil] / [Bottom Solder] Mask Sliver [7mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDYWOWUN420C3CCGQHYU0SZANOCPP3ZH0JXTL0X3HBOK3XIXI35T1H"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk To Solder Mask (Clearance=10mil) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2056.68mil|Location2.X=2067.93mil|Location1.Y=4376.501mil|Location2.Y=4387.751mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2056.68mil|Location2.X=2067.93mil|Location1.Y=4376.501mil|Location2.Y=4387.751mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (4.917mil &lt; 10mil) Between Pad CAP-1(2050mil,4390mil) on Top Layer And Track (2067.716mil,4382.126mil)(2067.716mil,4397.874mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [4.917mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2067.503mil|Location2.X=2078.753mil|Location1.Y=4376.501mil|Location2.Y=4387.751mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2067.503mil|Location2.X=2078.753mil|Location1.Y=4376.501mil|Location2.Y=4387.751mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (4.917mil &lt; 10mil) Between Pad CAP-2(2085.433mil,4390mil) on Top Layer And Track (2067.716mil,4382.126mil)(2067.716mil,4397.874mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [4.917mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1715.876mil|Location2.X=1727.126mil|Location1.Y=4116.855mil|Location2.Y=4128.105mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1715.876mil|Location2.X=1727.126mil|Location1.Y=4116.855mil|Location2.Y=4128.105mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.839mil &lt; 10mil) Between Pad J2-1(1769.727mil,4134.291mil) on Top Layer And Track (1631.932mil,4122.48mil)(1712.644mil,4122.48mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.839mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1812.329mil|Location2.X=1823.579mil|Location1.Y=4116.855mil|Location2.Y=4128.105mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1812.329mil|Location2.X=1823.579mil|Location1.Y=4116.855mil|Location2.Y=4128.105mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.839mil &lt; 10mil) Between Pad J2-1(1769.727mil,4134.291mil) on Top Layer And Track (1826.811mil,4122.48mil)(1889.803mil,4122.48mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.839mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1893.038mil|Location2.X=1904.288mil|Location1.Y=4116.855mil|Location2.Y=4128.105mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1893.038mil|Location2.X=1904.288mil|Location1.Y=4116.855mil|Location2.Y=4128.105mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.846mil &lt; 10mil) Between Pad J2-1(1946.893mil,4134.291mil) on Top Layer And Track (1826.811mil,4122.48mil)(1889.803mil,4122.48mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.846mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1715.876mil|Location2.X=1727.126mil|Location1.Y=3801.895mil|Location2.Y=3813.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1715.876mil|Location2.X=1727.126mil|Location1.Y=3801.895mil|Location2.Y=3813.145mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.839mil &lt; 10mil) Between Pad J2-2(1769.727mil,3795.709mil) on Top Layer And Track (1631.932mil,3807.52mil)(1712.644mil,3807.52mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.839mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1812.329mil|Location2.X=1823.579mil|Location1.Y=3801.895mil|Location2.Y=3813.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1812.329mil|Location2.X=1823.579mil|Location1.Y=3801.895mil|Location2.Y=3813.145mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.839mil &lt; 10mil) Between Pad J2-2(1769.727mil,3795.709mil) on Top Layer And Track (1826.811mil,3807.52mil)(1889.803mil,3807.52mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.839mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1893.038mil|Location2.X=1904.288mil|Location1.Y=3801.895mil|Location2.Y=3813.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1893.038mil|Location2.X=1904.288mil|Location1.Y=3801.895mil|Location2.Y=3813.145mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.846mil &lt; 10mil) Between Pad J2-3(1946.893mil,3795.709mil) on Top Layer And Track (1826.811mil,3807.52mil)(1889.803mil,3807.52mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.846mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2244.444mil|Location2.X=2255.694mil|Location1.Y=4448.832mil|Location2.Y=4460.082mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2244.444mil|Location2.X=2255.694mil|Location1.Y=4448.832mil|Location2.Y=4460.082mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (3.458mil &lt; 10mil) Between Pad LNA-1(2255mil,4439mil) on Top Layer And Text "*" (2240mil,4490.5mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [3.458mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2237.356mil|Location2.X=2248.606mil|Location1.Y=4449.157mil|Location2.Y=4460.407mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2237.356mil|Location2.X=2248.606mil|Location1.Y=4449.157mil|Location2.Y=4460.407mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (8.723mil &lt; 10mil) Between Pad LNA-2(2235mil,4439mil) on Top Layer And Text "*" (2240mil,4490.5mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [8.723mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2280.733mil|Location2.X=2291.983mil|Location1.Y=3934.375mil|Location2.Y=3945.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2280.733mil|Location2.X=2291.983mil|Location1.Y=3934.375mil|Location2.Y=3945.625mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.724mil &lt; 10mil) Between Pad R2-2(2305mil,3951.299mil) on Top Layer And Text "R1" (2279.997mil,3926.671mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.724mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDD2QBYJ3QO5TJJIJA04CI2F30RG13N5TL3G1JA3BFLT3LDMUSF24M"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk to Silk (Clearance=10mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2239.369mil|Location2.X=2250.619mil|Location1.Y=4468.796mil|Location2.Y=4480.046mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2239.369mil|Location2.X=2250.619mil|Location1.Y=4468.796mil|Location2.Y=4480.046mil|Absolute=True">Silk To Silk Clearance Constraint: (3.773mil &lt; 10mil) Between Text "*" (2240mil,4490.5mil) on Top Overlay And Text "LNA" (2188.342mil,4475.003mil) on Top Overlay Silk Text to Silk Clearance [3.773mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2276.028mil|Location2.X=2287.278mil|Location1.Y=4446.714mil|Location2.Y=4457.964mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2276.028mil|Location2.X=2287.278mil|Location1.Y=4446.714mil|Location2.Y=4457.964mil|Absolute=True">Silk To Silk Clearance Constraint: (6.677mil &lt; 10mil) Between Text "*" (2240mil,4490.5mil) on Top Overlay And Track (2272.1mil,4446mil)(2289mil,4446mil) on Top Overlay Silk Text to Silk Clearance [6.677mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2279.29mil|Location2.X=2290.54mil|Location1.Y=4446.59mil|Location2.Y=4457.84mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2279.29mil|Location2.X=2290.54mil|Location1.Y=4446.59mil|Location2.Y=4457.84mil|Absolute=True">Silk To Silk Clearance Constraint: (8.876mil &lt; 10mil) Between Text "*" (2240mil,4490.5mil) on Top Overlay And Track (2289mil,4429.1mil)(2289mil,4446mil) on Top Overlay Silk Text to Silk Clearance [8.876mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2415.359mil|Location2.X=2426.609mil|Location1.Y=4082.704mil|Location2.Y=4093.954mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2415.359mil|Location2.X=2426.609mil|Location1.Y=4082.704mil|Location2.Y=4093.954mil|Absolute=True">Silk To Silk Clearance Constraint: (5.039mil &lt; 10mil) Between Text "C2" (2425.003mil,4091.661mil) on Top Overlay And Track (2414.528mil,4046.535mil)(2414.528mil,4113.465mil) on Top Overlay Silk Text to Silk Clearance [5.039mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDSYMSA2CMFRA3KW2UX4EOPPOXAMTSACKKDAYWNZJPSW1FCC2GBQ4P"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Net Antennae (Tolerance=0mil) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2277.5mil|Location2.X=2353.336mil|Location1.Y=4142.5mil|Location2.Y=4264.456mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2277.5mil|Location2.X=2353.336mil|Location1.Y=4142.5mil|Location2.Y=4264.456mil|Absolute=True">Net Antennae: Via (2310mil,4175mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2327.5mil|Location2.X=2403.336mil|Location1.Y=4297.5mil|Location2.Y=4419.456mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\X Band Filter and LNA\Rev2_7500-8500.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2327.5mil|Location2.X=2403.336mil|Location1.Y=4297.5mil|Location2.Y=4419.456mil|Absolute=True">Net Antennae: Via (2360mil,4330mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
