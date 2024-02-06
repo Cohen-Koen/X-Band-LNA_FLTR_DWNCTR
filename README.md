@@ -3,7 +3,7 @@
  ## PLAN: LNA->DOWNCONVERTER->IF LNA AND GAIN
 ## CURRENT: LNA->DCNVTR WIP
 
-CONTACT:
-DISCORD: delta8zeta
-I2P: d8z@i2p.net (rarely check)
-Email: Contact on discord for email
+### CONTACT:
+> DISCORD: delta8zeta <br>
+> I2P: d8z@i2p.net (rarely check) <br>
+> Email: Contact on discord for email <br>
