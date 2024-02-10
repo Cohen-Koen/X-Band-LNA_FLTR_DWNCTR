@@ -1,0 +1,29 @@
+Removed Pin From Net: NetName=NetJ?_1 Pin=J?-1
+Change Component Footprint: Designator=J? Old Footprint=694102107102 New Footprint=694102107102
+Add Component: Footprint Not Found LTC5549IUDBTRMPBF_ADI
+Add Component: Footprint Not Found DBV0005A_N
+Added Pin To Net: NetName=NetJ?_1 Pin=J?-1
+Added Pin To Net: NetName=NetJ?_1 Pin=J?-1
+Add Pin To Net: Unknown Pin: Pin U?-1
+Add Pin To Net: Unknown Pin: Pin U?-1
+Add Pin To Net: Unknown Pin: Pin U?-2
+Add Pin To Net: Unknown Pin: Pin U?-3
+Add Pin To Net: Unknown Pin: Pin U?-3
+Add Pin To Net: Unknown Pin: Pin U?-4
+Add Pin To Net: Unknown Pin: Pin U?-4
+Add Pin To Net: Unknown Pin: Pin U?-5
+Add Pin To Net: Unknown Pin: Pin U?-6
+Add Pin To Net: Unknown Pin: Pin U?-7
+Add Pin To Net: Unknown Pin: Pin U?-8
+Add Pin To Net: Unknown Pin: Pin U?-9
+Add Pin To Net: Unknown Pin: Pin U?-10
+Add Pin To Net: Unknown Pin: Pin U?-12
+Add Pin To Net: Unknown Pin: Pin U?-13
+Add Net: Net with name "NetJ?_1" already exists
+Add Net: Net with name "NetJ?_1" already exists
+Add Net: Net with name "NetJ?_1" already exists
+Added Member To Class: ClassName=LNBF Member=Component J? EMPCB.SMAFSTJ.B.HT
+Added Member To Class: ClassName=LNBF Member=Component J? SMA IN
+Added Member To Class: ClassName=LNBF Member=Component J? 694102107102
+Add Class Member: Failed to add class member : Component U? LTC5549IUDB#TRMPBF
+Add Class Member: Failed to add class member : Component U? LP2985AIM5X-3.3/NOPB

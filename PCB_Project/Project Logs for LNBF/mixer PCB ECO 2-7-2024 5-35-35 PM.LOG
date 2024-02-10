@@ -1,0 +1,8 @@
+Change Component Footprint: Designator=J4 Old Footprint=694102107102 New Footprint=694102107102
+Add Component: Footprint Not Found DBV0005A_N
+Add Pin To Net: Unknown Pin: Pin U2-1
+Add Pin To Net: Unknown Pin: Pin U2-2
+Add Pin To Net: Unknown Pin: Pin U2-3
+Add Pin To Net: Unknown Pin: Pin U2-4
+Add Pin To Net: Unknown Pin: Pin U2-5
+Add Class Member: Failed to add class member : Component U2 LP2985AIM5X-3.3/NOPB

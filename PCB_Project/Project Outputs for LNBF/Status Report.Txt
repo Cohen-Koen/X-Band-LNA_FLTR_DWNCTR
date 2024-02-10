@@ -1,0 +1,11 @@
+Output: Generates pick and place files
+Type  : Pick Place
+From  : Variant [[No Variations]] of Project [LNBF.PrjPcb]
+   Generated File[Pick Place for rev3mixer.txt]
+   Generated File[Pick Place for rev3mixer.csv]
+
+
+Files Generated   : 2
+Documents Printed : 0
+
+Finished Output Generation At 10:11:26 PM On 2/9/2024

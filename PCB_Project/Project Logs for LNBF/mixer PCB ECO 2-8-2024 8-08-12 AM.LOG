@@ -1,0 +1,38 @@
+Change Footprint: Cannot match pads with new footprint in component :Voltage Reg & Etc Footprint:NDE0003A
+Change Component Comment : Designator=Voltage Reg & Etc Old Comment=Comment New Comment=LM1085IT-3.3/NOPB
+Change Component Designator: OldDesignator=Voltage Reg & Etc NewDesignator=U?
+Change Managed Component Library Link : Designator=U? Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=26B44634-8B52-444B-A9FC-7D6CF94F0DE0 Old RevisionGUID= New RevisionGUID=02C83B09-E1AE-4EE7-911A-F0F10F863B0D
+Change component parameters: Designator = "Voltage Reg & Etc" ("U?"); Footprint = "DBV0005A_M"; UniqueID = "\IZHFXNEQ" ("\IZHFXNEQ")
+Change component parameters (AddParameter): Name = "Code_IPC"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Code_JEDEC"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Code_JEITA"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet URL"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.ti.com/general/docs/lit/getliterature.tsp?genericPartNumber=LM1085&fileType=pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "CompType"; Value = "LDO IC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "High-Reliability"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageDescription"; Value = "TO-220, Molded, 3 Lead, Straight"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageReference"; Value = "NDE0003A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageTopMarking"; Value = "NSUZXYTTE#*LM1085*IT-3.3"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PartNumber"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PinCount"; Value = "3"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PowerWise"; Value = "N"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RoHS"; Value = "Y"; VariantName = "[No Variations]"
+Add Component: Footprint Not Found DBV0005A_N
+Add Pin To Net: Unknown Pin: Pin U2-1
+Add Pin To Net: Unknown Pin: Pin U2-2
+Add Pin To Net: Unknown Pin: Pin U2-3
+Add Pin To Net: Unknown Pin: Pin U2-4
+Add Pin To Net: Unknown Pin: Pin U2-5
+Added Pin To Net: NetName=GND Pin=U?-1
+Added Pin To Net: NetName=NetU1_7 Pin=U1-7
+Added Pin To Net: NetName=NetU1_7 Pin=U1-8
+Added Pin To Net: NetName=NetU1_7 Pin=U?-2
+Added Net: Name=NetU1_7
+Added Member To Class: ClassName=LNBF Member=Component C2 GCQ1555C1HR15BB01D
+Added Member To Class: ClassName=LNBF Member=Component C4 GRM55DR72E105KW01L
+Added Member To Class: ClassName=LNBF Member=Component C5 06032U150GAT2A
+Added Member To Class: ClassName=LNBF Member=Component J1 OUT
+Added Member To Class: ClassName=LNBF Member=Component J3 EMPCB.SMAFSTJ.B.HT
+Add Class Member: Failed to add class member : Component U2 LP2985AIM5X-3.3/NOPB
+Added Member To Class: ClassName=LNBF Member=Component U? LM1085IT-3.3/NOPB

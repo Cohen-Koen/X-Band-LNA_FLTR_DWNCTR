@@ -1,0 +1,26 @@
+Altium Designer Pick and Place Locations
+C:\Users\Public\Documents\Altium\X Band Filter and LNA - Working\PCB_Project\Project Outputs for LNBF\Pick Place for rev3mixer.csv
+
+========================================================================================================================
+File Design Information:
+
+Date:       09/02/24
+Time:       22:11
+Revision:   Not in VersionControl
+Variant:    No variations
+Units used: mm
+
+"Designator","Comment","Layer","Footprint","Center-X(mm)","Center-Y(mm)","Rotation","Description"
+"U?","LM1085IT-3.3/NOPB","TopLayer","NDE0003A","64,7700","89,7890","270","3A Low Dropout Positive Regulators, 3-pin TO-220, Pb-Free"
+"U4","LM1085IT-3.3/NOPB","TopLayer","NDE0003A","62,6110","81,7880","180","3A Low Dropout Positive Regulators, 3-pin TO-220, Pb-Free"
+"U3","LM1085IT-3.3/NOPB","TopLayer","NDE0003A","59,4360","89,7890","270","3A Low Dropout Positive Regulators, 3-pin TO-220, Pb-Free"
+"U1","LTC5549IUDB#TRMPBF","TopLayer","LTC5549IUDBTRMPBF_ADI","69,0880","98,9330","270","No Description Available"
+"LNA1","PMA-183PLN+","TopLayer","JV2579_MNC","69,0880","104,3178","0","No Description Available"
+"J4","694102107102","TopLayer","694102107102","74,1680","82,3961","0",""
+"LO","EMPCB.SMAFSTJ.B.HT","TopLayer","FP-EMPCB_SMAFSTJ_B_HT-MFG","77,0890","98,9330","270","CONN SMA JACK STR 50OHM EDGE MNT"
+"X-Band","SMA IN","TopLayer","MOLX-731000114_V","60,8330","98,9330","0","SMA Right-Angle PCB Jack Receptacle, Brass Body, Gold Plated, 50 Ohm, 5-Pin THD, RoHS, Tray"
+"Output IF","OUT","TopLayer","FP-EMPCB_SMAFSTJ_B_HT-MFG","69,2150","110,1090","0","CONN SMA JACK STR 50OHM EDGE MNT"
+"C5","06032U150GAT2A","TopLayer","CAPC1508X91X25LL25T13","73,5330","98,3130","90",""
+"C4","GRM55DR72E105KW01L","TopLayer","FP-GRM55D-0_4-IPC_A","72,3275","90,8050","0","Chip Multilayer Ceramic Capacitors for General Purpose, 2220, 1.0uF, X7R, 15%, 10%, 250V"
+"C3","C0603C220J5GACTU","TopLayer","FP-C0603C-CF-MFG","70,2310","95,1230","0","Cap Ceramic 22pF 50V C0G 5% SMD 0603 125°C Paper T/R"
+"C2","GCQ1555C1HR15BB01D","TopLayer","FP-GCQ155-0_05-MFG","65,4050","98,5330","270","High Q Ceramic Capacitor for Automotive 0.15pF ±0.1pF 50VDC C0G 0402 Paper T/R"
