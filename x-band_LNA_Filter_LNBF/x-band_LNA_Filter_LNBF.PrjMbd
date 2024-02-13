@@ -50,27 +50,6 @@ PrefsVaultGUID=
 PrefsRevisionGUID=
 
 [Document1]
-DocumentPath=..\X Band Low Noise Amplifier with Filtering_WXSAT\LNA_FILTER.PrjPcb
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=0
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=
-VaultGUID=
-ManagedProjectGUID=
-RevisionGUID=
-ProjectName=LNA_FILTER.PrjPcb
-
-[Document2]
 DocumentPath=..\PCB_Project\LNBF.PrjPcb
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -90,6 +69,8 @@ VaultGUID=
 ManagedProjectGUID=
 RevisionGUID=
 ProjectName=LNBF.PrjPcb
+VaultURL=
+VaultName=
 
 [OutputGroup1]
 Name=Netlist Outputs
