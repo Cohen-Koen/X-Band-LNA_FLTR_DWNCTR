@@ -19,6 +19,5 @@ As of now I have prototyped my first version. Some design updates:
 • simulation needed.
 
 Overall construction was easy and the cost was low due to sampling from MiniCircuits. Need a better radio to test the upper bounds and a proper signal synthesizer to test the overall system performance.![IMG_7249.jpeg](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjcwMSwicHVyIjoiYmxvYl9pZCJ9fQ==--9559f20a1fe872044ca72e7444db961874126cd2/IMG_7249.jpeg)
-![IMG_4520.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjcwMCwicHVyIjoiYmxvYl9pZCJ9fQ==--9f6a693c7b4a81d4efbb15666894e05780d9f63e/IMG_4520.png)
   
 
